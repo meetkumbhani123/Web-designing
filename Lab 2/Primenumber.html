@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let start = parseInt(prompt('Enter start point: '));
+        let end = parseInt(prompt('Enter end point: '));
+
+        document.write("Prime numbers between " + start + " and " + end + ":<br>");
+
+        for (let i = start; i <= end; i++) {
+            let flag = true;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (i > 1 && flag) {
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

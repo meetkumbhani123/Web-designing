@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let size= parseInt(prompt('enter the size of array'));
+        let arr=[];
+        for(let i=0;i<size;i++){
+            arr[i]=parseInt(prompt(`Enter the ${i} elements:`));
+        }
+        max=0
+        
+        for(let i=0;i<size;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        document.write("max number is:"+max);
+    </script>
+</body>
+</html>

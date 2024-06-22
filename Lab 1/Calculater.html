@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a= parseInt(prompt('Enter a first number'));
+        let b=parseInt(prompt('Enter seacond number'));
+        let c=prompt("Enter operater");
+        if(c=='+'){
+            document.write("sum is:" +(a+b));
+        }
+        else if(c=='-'){    
+            document.write("sub is:" +(a-b));
+        }   
+        else if(c=='*'){
+            document.write("mul is:" +(a*b));
+        }
+        else if(c=='/'){
+            document.write("div is:" +(a/b));
+        }
+        else if(c=='%'){
+            document.write("mod is:" +(a%b));
+        }
+        else{
+            document.write("invalid operater");
+        }
+    </script>
+</body>
+</html>
