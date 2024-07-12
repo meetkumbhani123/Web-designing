@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+
+
+            border: solid 3px black;
+            height: 300px;
+            width: 335px;
+
+        }
+
+        #input {
+            width: 200px;
+            height: 45px;
+            font-size: 30px;
+            text-align: right;
+            padding: 10px;
+            border: solid black 3px;
+            box-sizing: border-box;
+            margin-top: 7px;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+            border: solid 3px black;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="textbox">
+            <input type="text" id="input" placeholder="0" readonly>
+            <button onclick="clear1()" class="button">c</button>
+            <button onclick="remove1()" class="button">x</button>
+        </div>
+        <div class="buttons">
+            <button onclick="addnumber('7')" class="button">7</button>
+            <button onclick="addnumber('8')" class="button">8</button>
+            <button onclick="addnumber('9')" class="button">9</button>
+            <button onclick="addnumber('+')" class="button">+</button>
+            <div>
+                <button onclick="addnumber('4')" class="button">4</button>
+                <button onclick="addnumber('5')" class="button">5</button>
+                <button onclick="addnumber('6')" class="button">6</button>
+                <button onclick="addnumber('-')" class="button">-</button>
+            </div>
+            <div>
+                <button onclick="addnumber('1')" class="button">1</button>
+                <button onclick="addnumber('2')" class="button">2</button>
+                <button onclick="addnumber('3')" class="button">3</button>
+                <button onclick="addnumber('*')" class="button">*</button>
+            </div>
+            <div>
+                <button onclick="addnumber('0')" class="button">0</button>
+                <button onclick="addnumber('.')" class="button">.</button>
+                <button onclick="calculate()" class="button">=</button>
+                <button onclick="addnumber('/')" class="button">/</button>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+    </div>
+    <script>
+        function addnumber(char) {
+            document.getElementById("input").value += char;
+
+        }
+        try {
+            function calculate() {
+                document.getElementById("input").value = eval(document.getElementById("input").value)
+            }
+        }
+        catch(error){
+            document.getElementById("input").value='error';
+        }
+        function clear1() {
+            document.getElementById("input").value = "";
+
+        }
+        function remove1() {
+            document.getElementById("input").value = document.getElementById("input").value.slice(0, -1)
+        }
+        function errormessage() {
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

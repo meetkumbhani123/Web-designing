@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">input::</label>
+        <input type="text" id="user">
+        <button onclick="validate()">submit</button>
+    </div>
+    <div>
+        <label for="">input::</label>
+        <input type="text" id="email">
+        <button onclick="emailcheck()">sumbit</button>
+    </div>
+    <div>
+        <label for="">password</label>
+        <input type="password" id="password">
+        <button onclick="passcheck()">submit</button>
+    </div>
+    <div>
+        <label for="">confirm password</label>
+        <input type="password" id="confirmPassword">
+        <button onclick="confirmPass()">submit</button>
+    </div>
+    <div>
+        <label for="">DOF::</label>
+        <input type="text" id="dof">
+        <button onclick="dofcheck()">submit</button>
+    </div>
+    <div>
+        <label for="">Enroll:</label>
+        <input type="text" id="enroll">
+        <button onclick="enrollcheck()">submit</button>
+    </div>
+    <div>
+        <label for="">Email:</label>
+        <input type="email" id="email2">
+        <button onclick="emailcheck2()">submit</button>
+    </div>
+    <div style="color: green;" id="sucess">
+
+    </div>
+    <div style="color: red;" id="uncess"></div>
+    <script>
+        function validate() {
+
+
+            user = document.getElementById("user").value;
+            userRegx = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+
+            if (userRegx.test(user)) {
+                document.getElementById("sucess").innerHTML = "valid";
+                document.getElementById("uncess").innerHTML = "";
+            }
+            else {
+                document.getElementById("uncess").innerHTML = "invalid";
+                document.getElementById("sucess").innerHTML = "";
+            }
+
+        }
+        function emailcheck() {
+            email = document.getElementById("email").value;
+            emailRegx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (emailRegx.test(email)) {
+                document.getElementById("uncess").innerHTML = "";
+                document.getElementById("sucess").innerHTML = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "invalid";
+            }
+        }
+        function passcheck() {
+            pass = document.getElementById("password").value;
+            passRegx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (passRegx.test(pass)) {
+                document.getElementById("uncess").innerHTML = "";
+                document.getElementById("sucess").innerHTML = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "invalid";
+            }
+        }
+        function confirmPass() {
+            pass = document.getElementById("passward").value;
+            pass2 = document.getElementById("confirmPassword").value;
+            if (pass === pass2) {
+                document.getElementById("uncess").textContent = "";
+                document.getElementById("sucess").textContent = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "password not match";
+            }
+        }
+        function dofcheck() {
+            dof = document.getElementById("dof").value;
+            dofRegx = /^\d{2}\/\d{2}\/\d{4}$/;
+            if (dofRegx.test(dof)) {
+                document.getElementById("uncess").innerHTML = "";
+                document.getElementById("sucess").innerHTML = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "invalid";
+            }
+        }
+        function enrollcheck() {
+            enroll = document.getElementById("enroll").value;
+            enrollRegx = /^[0-9]{12}$/;
+            if (enrollRegx.test(enroll)) {
+                document.getElementById("uncess").innerHTML = "";
+                document.getElementById("sucess").innerHTML = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "invalid";
+            }
+        }
+        function emailcheck2() {
+            email = document.getElementById("email2").value;
+            emailR = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (emailR.test(email)) {
+                document.getElementById("uncess").innerHTML = "";
+                document.getElementById("sucess").innerHTML = "valid";
+            }
+            else {
+                document.getElementById("sucess").innerHTML = "";
+                document.getElementById("uncess").innerHTML = "invalid";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

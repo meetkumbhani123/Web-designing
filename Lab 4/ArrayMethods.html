@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[1,2,3,4,5,6];
+        console.log("before: "+a);
+        a.push(7);
+        console.log("aftre: "+a);
+        a.pop(7);
+        console.log("aftre pop: "+a);
+        a.shift(1)
+        console.log("aftre shiptpt: "+a);
+        a.unshift(15);
+        console.log("aftre unshitft: "+a);
+        a.splice(2,3);
+        console.log("aftre splice: "+a);
+        a.sort(function(a,b){return a-b});
+        console.log(a)
+
+    </script>
+</body>
+</html>

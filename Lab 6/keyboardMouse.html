@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="SingleClick()">click</button>
+    <button ondblclick="doubleClick()">double click</button>
+    <input onkeydown="keyDown()" type="text">
+    <input type="text" onkeyup="keyup()">
+    <input type="text" onkeypress="keyPress()">
+    
+    
+    <script>
+        function SingleClick(){
+            console.log("single click is called");
+        }
+        function doubleClick(){
+            console.log("double click is called");
+        }
+        function keyDown(){
+            console.log("key down is called");
+             
+        }
+        function keyup(){
+            console.log("key up is called");
+        }
+        function keyPress(){
+            console.log("key press is called");
+        }
+        
+    </script>
+</body>
+</html>
