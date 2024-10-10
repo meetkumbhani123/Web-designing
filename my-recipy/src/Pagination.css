@@ -1,0 +1,40 @@
+/* Pagination.css */
+
+.pagination {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination li {
+    margin: 0 10px;
+  }
+  
+  .pagination li a {
+    color: #337ab7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .pagination li a:hover {
+    color: #23527c;
+  }
+  
+  .pagination li.active a {
+    color: #23527c;
+    font-weight: bold;
+  }
+  
+  .pagination li.active {
+    border-bottom: 2px solid #23527c;
+  }
+  
+  .pagination li:first-child {
+    margin-left: 0;
+  }
+  
+  .pagination li:last-child {
+    margin-right: 0;
+  }
